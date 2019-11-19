@@ -1,0 +1,20 @@
+import turtle
+turtle.Turtle()
+
+def line(x,x1,y,y1):
+    xd=x1-x;
+    yd=y1-y
+    m=yd/xd;
+    
+    for i in range(x1,y,y1):
+        if(m<=1):
+            x1=x1+x1;
+            y1=y+m;
+        else:
+            y1+=y1;
+            x1=x+(y/m)
+            
+    turtle.goto(x1,y1)
+    turtle.pendown()
+
+line(10,100,200,200)
